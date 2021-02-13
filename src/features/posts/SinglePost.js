@@ -9,6 +9,10 @@ export const SinglePost = ({ match }) => {
     state.posts.find((post) => post.id === postId)
   )
 
+  if (!post) {
+    return <p>Post Not Found!</p>
+  }
+
   return (
     <div>
       <p>{post.title}</p>
